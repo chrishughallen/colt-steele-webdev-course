@@ -1,0 +1,16 @@
+<h1>Results Page</h1>
+
+
+<% data["Search"].forEach(function(movie){ %>
+<li>
+    <strong>
+        <a href="http://omdbapi.com/?i=<%=movie["imdbID"]%>&apikey=thewdb">
+        <%= movie["Title"] %>
+        </a>
+        </strong> 
+        - <%=movie["Year"]%> 
+    </li>
+    
+<% }); %>
+
+<a href="/">New Search</a>
